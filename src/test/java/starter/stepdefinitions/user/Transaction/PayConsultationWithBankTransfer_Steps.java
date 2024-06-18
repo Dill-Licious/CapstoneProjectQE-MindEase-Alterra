@@ -4,8 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
+import starter.user.Transaction.PayConsultationWithBankTransfer;
 
-public class PayConsultationWithBankTransfer {
+public class PayConsultationWithBankTransfer_Steps {
     @Steps
     PayConsultationWithBankTransfer payConsultationWithBankTransfer;
 

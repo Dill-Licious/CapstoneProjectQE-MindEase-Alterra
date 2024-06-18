@@ -1,0 +1,60 @@
+// TODO:
+----Manage Patient:-----
+User:
+- Auth (Register, Login, Reset-Password, Login)
+
+Doctor:
+- Auth (Register, Login, Reset-Password, Login)
+
+----Manage Information Related to Mental Health----
+User:
+- Mood Tracker (Send mood, Get all moods by user id between range of date, Get mood by id) //DONE
+- Articles (Get all articles, Get article by id, "get liked article by user id, like a article")
+- Musics (Get all musics, Get music by id, get liked music by user id, like a music) //DONE
+- Inspirational Stories (Get all stories, get story by id, get liked stories by user id, like a story) //DONE
+
+Doctor:
+- Articles (Post articles, Delete article by id, get all article)
+- Musics (Post music, Get all music, delete music)
+- Inspirational Stories (Post story, Get all stories, delete story)
+
+//TODO
+----View Patient Complaints----
+User:
+- Complaints (send complaint) // DONE
+
+Doctor:
+(belum ada end-pointnya)
+
+----Give Recommendation from the patient complaint----
+Doctor:
+- Consultation notes: (Post Consultation Notes)
+
+//TODO
+----Get Treatment Recommendations for the patient (AI)----
+User:
+- Chatbot (Send messages to mental health chatbot)
+
+Doctor:
+- Chatbots (Send message to chatbot to get treatment recommendations)
+
+//TODO
+----Chat With the patient----
+User:
+- Chat messages (send chat to doctor, Get all chat messages by chat_id) //DONE
+
+Doctor:
+- Chat messages (Send chat to user, Get all chat messages by chat_id)
+
+----Get a notification if complaint from patient is received----
+(tidak ada end-pointnya)
+
+// TODO
+----Tambahan:----
+User:
+- Consultations: (Create consultation, Get all consultations by user id, Get consultation by id)
+- Payments: (Pay consultation with payment gateway)
+
+Doctor:
+- Consultations (Verify consultations request, Get all consultations by doctor id)
+- Transactions (Get all transactions by doctor id, Delete transaction by transaction id)

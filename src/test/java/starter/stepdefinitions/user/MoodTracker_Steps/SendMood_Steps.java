@@ -1,4 +1,4 @@
-package starter.stepdefinitions.MoodTracker_Steps;
+package starter.stepdefinitions.user.MoodTracker_Steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

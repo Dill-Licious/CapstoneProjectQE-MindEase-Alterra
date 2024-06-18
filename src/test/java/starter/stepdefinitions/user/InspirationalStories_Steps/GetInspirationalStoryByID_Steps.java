@@ -1,4 +1,4 @@
-package starter.stepdefinitions.InspirationalStories_Steps;
+package starter.stepdefinitions.user.InspirationalStories_Steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

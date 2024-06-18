@@ -1,4 +1,4 @@
-package starter.stepdefinitions.Music_Steps;
+package starter.stepdefinitions.user.Music_Steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

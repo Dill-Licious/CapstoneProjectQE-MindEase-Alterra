@@ -1,4 +1,4 @@
-package starter.stepdefinitions.Doctors_Steps;
+package starter.stepdefinitions.user.Doctors_Steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

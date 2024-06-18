@@ -1,4 +1,4 @@
-package starter.stepdefinitions.Authentication_Steps;
+package starter.stepdefinitions.user.Authentication_Steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
