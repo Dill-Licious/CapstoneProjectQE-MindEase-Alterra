@@ -21,7 +21,7 @@ public class LikeStory {
     @Step("I send a request to like a story in MindEase App")
     public void sendRequestLikeStory(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("story_id", 5);
+        requestBody.put("story_id", 4);
 
         String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTkyMTEwOTIsInJvbGUiOiJ1c2VyIiwidXNlcklkIjo0N30.BXb4uEmcFQbbDc-slP7YpdffVpbNhoCpWbsvBuI-p2M";
 

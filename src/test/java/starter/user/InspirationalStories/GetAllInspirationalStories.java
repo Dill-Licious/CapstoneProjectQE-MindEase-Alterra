@@ -44,7 +44,6 @@ public class GetAllInspirationalStories {
             response.body("data.content", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.date", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.image_url", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.view_count", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.is_liked", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.doctor.id", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.doctor.name", Matchers.everyItem(Matchers.notNullValue()));

@@ -31,28 +31,32 @@ public class GetDoctorByID {
         JsonSchemaHelper helper = new JsonSchemaHelper();
         String schema = helper.getResponseSchema(JsonSchema.GET_DOCTOR_BY_ID);
 
-        restAssuredThat(response -> response.body("status", Matchers.equalTo(true)));
-        restAssuredThat(response -> response.body("message", Matchers.equalTo("Success Get Doctor By ID")));
-        restAssuredThat(response -> response.body("data.id", Matchers.equalTo(1)));
-        restAssuredThat(response -> response.body("data.username", Matchers.equalTo("jhondoe1")));
-        restAssuredThat(response -> response.body("data.email", Matchers.equalTo("jhondoe1@gmail.com")));
-        restAssuredThat(response -> response.body("data.name", Matchers.equalTo("wahyudin")));
-        restAssuredThat(response -> response.body("data.address", Matchers.equalTo("ini alamat")));
-        restAssuredThat(response -> response.body("data.phone_number", Matchers.equalTo("081123")));
-        restAssuredThat(response -> response.body("data.gender", Matchers.equalTo("wanita")));
-        restAssuredThat(response -> response.body("data.is_available", Matchers.equalTo(true)));
-        restAssuredThat(response -> response.body("data.profile_picture", Matchers.equalTo("ini link fotonya")));
-        restAssuredThat(response -> response.body("data.balance", Matchers.equalTo(0)));
-        restAssuredThat(response -> response.body("data.experience", Matchers.equalTo(5)));
-        restAssuredThat(response -> response.body("data.almamater", Matchers.equalTo("ITB")));
-        restAssuredThat(response -> response.body("data.graduation_year", Matchers.equalTo(2020)));
-        restAssuredThat(response -> response.body("data.practice_location", Matchers.equalTo("RS. Hernia")));
-        restAssuredThat(response -> response.body("data.practice_city", Matchers.equalTo("Jakarta")));
-        restAssuredThat(response -> response.body("data.practice_province", Matchers.equalTo("Jakarta")));
-        restAssuredThat(response -> response.body("data.str_number", Matchers.equalTo("")));
-        restAssuredThat(response -> response.body("data.fee", Matchers.equalTo(0)));
-        restAssuredThat(response -> response.body("data.specialist", Matchers.equalTo("Jiwa")));
+        restAssuredThat(response -> {
+            response.body("status", Matchers.equalTo(true));
+            response.body("message", Matchers.equalTo("Success Get Doctor By ID"));
+            response.body("data.id", Matchers.equalTo(1));
+            response.body("data.username", Matchers.equalTo("jhondoe1"));
+            response.body("data.email", Matchers.equalTo("jhondoe1@gmail.com"));
+            response.body("data.name", Matchers.equalTo("wahyudin"));
+            response.body("data.address", Matchers.equalTo("ini alamat"));
+            response.body("data.phone_number", Matchers.equalTo("081123"));
+            response.body("data.gender", Matchers.equalTo("wanita"));
+            response.body("data.is_available", Matchers.equalTo(true));
+            response.body("data.profile_picture", Matchers.equalTo("ini link fotonya"));
+            response.body("data.balance", Matchers.equalTo(0));
+            response.body("data.experience", Matchers.equalTo(5));
+            response.body("data.bachelor_almamater", Matchers.equalTo(""));
+            response.body("data.bachelor_graduation_year", Matchers.equalTo(0));
+            response.body("data.master_almamater", Matchers.equalTo(""));
+            response.body("data.master_graduation_year", Matchers.equalTo(0));
+            response.body("data.practice_location", Matchers.equalTo("RS. Hernia"));
+            response.body("data.practice_city", Matchers.equalTo("Jakarta"));
+            response.body("data.fee", Matchers.equalTo(0));
+            response.body("data.specialist", Matchers.equalTo("Jiwa"));
+            response.body("data.amount", Matchers.equalTo(0));
+            response.body("data.rating_precentage", Matchers.equalTo(100));
 
-        restAssuredThat(response -> response.body(matchesJsonSchema(schema)));
+            response.body(matchesJsonSchema(schema));
+        });
     }
 }

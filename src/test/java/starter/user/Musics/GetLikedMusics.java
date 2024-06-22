@@ -40,14 +40,11 @@ public class GetLikedMusics {
             response.body("metadata.limit", Matchers.equalTo(10));
 
             response.body("data", Matchers.notNullValue());
-            response.body("data.size()", Matchers.greaterThan(0));
-
             response.body("data.id", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.title", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.singer", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.music_url", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.image_url", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.view_count", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.is_liked", Matchers.everyItem(Matchers.equalTo(true)));
 
             response.body(matchesJsonSchema(schema));

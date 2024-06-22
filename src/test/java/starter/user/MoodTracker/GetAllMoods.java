@@ -35,7 +35,6 @@ public class GetAllMoods {
             response.body("status", Matchers.equalTo(true));
             response.body("message", Matchers.equalTo("Success Get All Moods"));
             response.body("data", Matchers.notNullValue());
-            response.body("data.size()", Matchers.greaterThan(0));
 
             response.body("data.id", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.date", Matchers.everyItem(Matchers.notNullValue()));

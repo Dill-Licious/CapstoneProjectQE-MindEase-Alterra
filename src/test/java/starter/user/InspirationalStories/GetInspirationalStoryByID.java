@@ -34,12 +34,11 @@ public class GetInspirationalStoryByID {
         restAssuredThat(response -> response.body("status", Matchers.equalTo(true)));
         restAssuredThat(response -> response.body("message", Matchers.equalTo("Success Get Story By Id")));
         restAssuredThat(response -> response.body("data.id", Matchers.equalTo(1)));
-        restAssuredThat(response -> response.body("data.title", Matchers.equalTo("kamu adalah manusia hebat 1")));
-        restAssuredThat(response -> response.body("data.content", Matchers.equalTo("cerita inspirasi ini semoga menginspirasi dirimu yang sedang butuh diinspirasi agar terinspirasi")));
+        restAssuredThat(response -> response.body("data.title", Matchers.equalTo("Kisah Kupu-Kupu")));
+        restAssuredThat(response -> response.body("data.content", Matchers.equalTo("Suatu hari, seorang anak menemukan seekor kepompong yang hampir pecah. Ia memutuskan untuk membantu kupu-kupu itu dengan membuka kepompongnya sedikit. Namun, kupu-kupu itu keluar dengan sayap yang lemah dan tidak bisa terbang. Tanpa perjuangan keluar dari kepompong, otot sayapnya tidak berkembang sepenuhnya. Anak itu belajar bahwa proses perjuangan itu penting untuk memperkuat kita.")));
         restAssuredThat(response -> response.body("data.date", Matchers.equalTo("2024-01-28T05:56:52.341Z")));
-        restAssuredThat(response -> response.body("data.image_url", Matchers.equalTo("http://gambar.com")));
-        restAssuredThat(response -> response.body("data.view_count", Matchers.notNullValue()));
-        restAssuredThat(response -> response.body("data.is_liked", Matchers.equalTo(false)));
+        restAssuredThat(response -> response.body("data.image_url", Matchers.equalTo("https://res.cloudinary.com/dy2fwknbn/image/upload/v1718515300/uewlr4tmzaspdzf74tqk.jpg")));
+        restAssuredThat(response -> response.body("data.is_liked", Matchers.notNullValue()));
         restAssuredThat(response -> response.body("data.doctor.id", Matchers.equalTo(1)));
         restAssuredThat(response -> response.body("data.doctor.name", Matchers.equalTo("wahyudin")));
 

@@ -21,7 +21,7 @@ public class LikeMusic {
     @Step("I send a request to like a music in MindEase App")
     public void sendRequestLikeMusic(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("music_id", 9); //Misal: Like music dengan ID = 3 //NOTES: SETELAH DI TEST BAKAL BERUBAH
+        requestBody.put("music_id", 2); //Misal: Like music dengan ID = 3 //NOTES: SETELAH DI TEST BAKAL BERUBAH
 
         String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTkyMTEwOTIsInJvbGUiOiJ1c2VyIiwidXNlcklkIjo0N30.BXb4uEmcFQbbDc-slP7YpdffVpbNhoCpWbsvBuI-p2M";
 

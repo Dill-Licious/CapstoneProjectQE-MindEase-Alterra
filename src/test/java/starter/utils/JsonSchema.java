@@ -31,5 +31,8 @@ public class JsonSchema {
     public static final String LEAVE_FORUM_SCHEMA = "features/schema/user/Forums/leave_forum_schema.json";
     public static final String GET_ALL_FORUMS_SCHEMA = "features/schema/user/Forums/get_all_forums_schema.json";
     public static final String SEND_OTP_SCHEMA = "features/schema/user/OTP/send_otp_schema.json";
+    public static final String CREATE_CONSULTATION_NOTES_SCHEMA = "features/schema/doctor/create_consultation_notes_schema.json";
+    public static final String SEND_CHAT_TO_PATIENT_SCHEMA = "features/schema/doctor/send_chat_to_patient_schema.json";
+    public static final String GET_ALL_NOTIFICATION_SCHEMA = "features/schema/doctor/get_all_notification_schema.json";
 
 }

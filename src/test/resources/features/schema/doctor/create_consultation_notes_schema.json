@@ -15,29 +15,37 @@
         "id": {
           "type": "number"
         },
-        "title": {
+        "consultation_id": {
+          "type": "number"
+        },
+        "music_id": {
+          "type": "number"
+        },
+        "forum_id": {
+          "type": "number"
+        },
+        "main_point": {
           "type": "string"
         },
-        "singer": {
+        "next_step": {
           "type": "string"
         },
-        "music_url": {
+        "additional_note": {
           "type": "string"
         },
-        "image_url": {
+        "mood_tracker_note": {
           "type": "string"
-        },
-        "is_liked": {
-          "type": "boolean"
         }
       },
       "required": [
         "id",
-        "title",
-        "singer",
-        "music_url",
-        "image_url",
-        "is_liked"
+        "consultation_id",
+        "music_id",
+        "forum_id",
+        "main_point",
+        "next_step",
+        "additional_note",
+        "mood_tracker_note"
       ]
     }
   },

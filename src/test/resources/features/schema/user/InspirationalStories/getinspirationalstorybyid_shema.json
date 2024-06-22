@@ -27,9 +27,6 @@
         "image_url": {
           "type": "string"
         },
-        "view_count": {
-          "type": "number"
-        },
         "is_liked": {
           "type": "boolean"
         },
@@ -55,7 +52,6 @@
         "content",
         "date",
         "image_url",
-        "view_count",
         "is_liked",
         "doctor"
       ]

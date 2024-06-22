@@ -38,7 +38,6 @@ public class GetMusicByID {
         restAssuredThat(response -> response.body("data.singer", Matchers.equalTo("habubu")));
         restAssuredThat(response -> response.body("data.music_url", Matchers.equalTo("http://music.com")));
         restAssuredThat(response -> response.body("data.image_url", Matchers.equalTo("http://gambar.com")));
-        restAssuredThat(response -> response.body("data.view_count", Matchers.notNullValue()));
         restAssuredThat(response -> response.body("data.is_liked", Matchers.notNullValue()));
 
         restAssuredThat(response -> response.body(matchesJsonSchema(schema)));

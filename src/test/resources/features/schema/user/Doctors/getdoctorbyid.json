@@ -45,10 +45,16 @@
         "experience": {
           "type": "number"
         },
-        "almamater": {
+        "bachelor_almamater": {
           "type": "string"
         },
-        "graduation_year": {
+        "bachelor_graduation_year": {
+          "type": "number"
+        },
+        "master_almamater": {
+          "type": "string"
+        },
+        "master_graduation_year": {
           "type": "number"
         },
         "practice_location": {
@@ -57,17 +63,17 @@
         "practice_city": {
           "type": "string"
         },
-        "practice_province": {
-          "type": "string"
-        },
-        "str_number": {
-          "type": "string"
-        },
         "fee": {
           "type": "number"
         },
         "specialist": {
           "type": "string"
+        },
+        "amount": {
+          "type": "number"
+        },
+        "rating_precentage": {
+          "type": "number"
         }
       },
       "required": [
@@ -82,14 +88,16 @@
         "profile_picture",
         "balance",
         "experience",
-        "almamater",
-        "graduation_year",
+        "bachelor_almamater",
+        "bachelor_graduation_year",
+        "master_almamater",
+        "master_graduation_year",
         "practice_location",
         "practice_city",
-        "practice_province",
-        "str_number",
         "fee",
-        "specialist"
+        "specialist",
+        "amount",
+        "rating_precentage"
       ]
     }
   },

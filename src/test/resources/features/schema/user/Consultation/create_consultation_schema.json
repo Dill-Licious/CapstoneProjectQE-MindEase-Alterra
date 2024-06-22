@@ -15,7 +15,7 @@
         "id": {
           "type": "number"
         },
-        "Doctor": {
+        "doctor": {
           "type": "object",
           "properties": {
             "id": {
@@ -51,22 +51,22 @@
             "experience": {
               "type": "number"
             },
-            "almamater": {
+            "bachelor_almamater": {
               "type": "string"
             },
-            "graduation_year": {
+            "bachelor_graduation_year": {
+              "type": "number"
+            },
+            "master_almamater": {
+              "type": "string"
+            },
+            "master_graduation_year": {
               "type": "number"
             },
             "practice_location": {
               "type": "string"
             },
             "practice_city": {
-              "type": "string"
-            },
-            "practice_province": {
-              "type": "string"
-            },
-            "str_number": {
               "type": "string"
             },
             "fee": {
@@ -76,6 +76,9 @@
               "type": "string"
             },
             "amount": {
+              "type": "number"
+            },
+            "rating_precentage": {
               "type": "number"
             }
           },
@@ -91,45 +94,46 @@
             "profile_picture",
             "balance",
             "experience",
-            "almamater",
-            "graduation_year",
+            "bachelor_almamater",
+            "bachelor_graduation_year",
+            "master_almamater",
+            "master_graduation_year",
             "practice_location",
             "practice_city",
-            "practice_province",
-            "str_number",
             "fee",
             "specialist",
-            "amount"
+            "amount",
+            "rating_precentage"
           ]
         },
-        "Status": {
+        "status": {
           "type": "string"
         },
-        "PaymentStatus": {
+        "payment_status": {
           "type": "string"
         },
-        "IsAccepted": {
+        "is_accepted": {
           "type": "boolean"
         },
-        "IsActive": {
+        "is_active": {
           "type": "boolean"
         },
-        "Date": {
+        "start_date": {
           "type": "string"
         },
-        "Time": {
+        "end_date": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "Doctor",
-        "Status",
-        "PaymentStatus",
-        "IsAccepted",
-        "IsActive",
-        "Date",
-        "Time"
+        "doctor",
+        "status",
+        "payment_status",
+        "is_accepted",
+        "is_active",
+        "start_date",
+        "end_date"
       ]
     }
   },

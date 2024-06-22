@@ -35,8 +35,8 @@ public class CreateConsultation {
                 .post(setAPIEndpointCreateConsultation());
     }
 
-    @Step("I should receive a data confirmation indicate consultation was created successfully, including the schedule and doctor's details")
-    public void receiveDataConfirmConsultationWasCreated(){
+    @Step("I should receive a data confirmation indicating consultation was created successfully, including the schedule and doctor's details")
+    public void receiveDataConfirmConsultationWasCreated() {
         JsonSchemaHelper helper = new JsonSchemaHelper();
         String schema = helper.getResponseSchema(JsonSchema.CREATE_CONSULTATION_SCHEMA);
 
@@ -46,35 +46,37 @@ public class CreateConsultation {
 
             response.body("data.id", Matchers.notNullValue());
 
-            response.body("data.Doctor.id", Matchers.notNullValue());
-            response.body("data.Doctor.username", Matchers.equalTo("mamat1"));
-            response.body("data.Doctor.email", Matchers.equalTo("mamatsp@gmail.com"));
-            response.body("data.Doctor.name", Matchers.equalTo("mamat darwin"));
-            response.body("data.Doctor.address", Matchers.equalTo("jl. kemana"));
-            response.body("data.Doctor.phone_number", Matchers.equalTo("08321"));
-            response.body("data.Doctor.gender", Matchers.equalTo("pria"));
-            response.body("data.Doctor.is_available", Matchers.equalTo(true));
-            response.body("data.Doctor.profile_picture", Matchers.equalTo("http://gambar.com"));
-            response.body("data.Doctor.balance", Matchers.equalTo(0));
-            response.body("data.Doctor.experience", Matchers.equalTo(2));
-            response.body("data.Doctor.almamater", Matchers.equalTo("Unissula"));
-            response.body("data.Doctor.graduation_year", Matchers.equalTo(2019));
-            response.body("data.Doctor.practice_location", Matchers.equalTo("RS. Bedah Aro"));
-            response.body("data.Doctor.practice_city", Matchers.equalTo("Pekalongan"));
-            response.body("data.Doctor.practice_province", Matchers.equalTo("Jawa Tengah"));
-            response.body("data.Doctor.str_number", Matchers.equalTo(""));
-            response.body("data.Doctor.fee", Matchers.equalTo(0));
-            response.body("data.Doctor.specialist", Matchers.equalTo("Mental"));
-            response.body("data.Doctor.amount", Matchers.equalTo(0));
+            response.body("data.doctor.id", Matchers.notNullValue());
+            response.body("data.doctor.username", Matchers.equalTo("mamat1"));
+            response.body("data.doctor.email", Matchers.equalTo("mamatsp@gmail.com"));
+            response.body("data.doctor.name", Matchers.equalTo("mamat darwin"));
+            response.body("data.doctor.address", Matchers.equalTo("jl. kemana"));
+            response.body("data.doctor.phone_number", Matchers.equalTo("08321"));
+            response.body("data.doctor.gender", Matchers.equalTo("pria"));
+            response.body("data.doctor.is_available", Matchers.equalTo(true));
+            response.body("data.doctor.profile_picture", Matchers.equalTo("http://gambar.com"));
+            response.body("data.doctor.balance", Matchers.equalTo(0));
+            response.body("data.doctor.experience", Matchers.equalTo(2));
+            response.body("data.doctor.bachelor_almamater", Matchers.equalTo(""));
+            response.body("data.doctor.bachelor_graduation_year", Matchers.equalTo(0));
+            response.body("data.doctor.master_almamater", Matchers.equalTo(""));
+            response.body("data.doctor.master_graduation_year", Matchers.equalTo(0));
+            response.body("data.doctor.practice_location", Matchers.equalTo("RS. Bedah Aro"));
+            response.body("data.doctor.practice_city", Matchers.equalTo("Pekalongan"));
+            response.body("data.doctor.fee", Matchers.equalTo(0));
+            response.body("data.doctor.specialist", Matchers.equalTo("Mental"));
+            response.body("data.doctor.amount", Matchers.equalTo(0));
+            response.body("data.doctor.rating_precentage", Matchers.equalTo(0));
 
-            response.body("data.Status", Matchers.equalTo("pending"));
-            response.body("data.PaymentStatus", Matchers.equalTo("pending"));
-            response.body("data.IsAccepted", Matchers.equalTo(false));
-            response.body("data.IsActive", Matchers.equalTo(false));
-            response.body("data.Date", Matchers.equalTo("2024-06-15"));
-            response.body("data.Time", Matchers.equalTo("13:00"));
+            response.body("data.status", Matchers.equalTo("pending"));
+            response.body("data.payment_status", Matchers.equalTo("pending"));
+            response.body("data.is_accepted", Matchers.equalTo(false));
+            response.body("data.is_active", Matchers.equalTo(false));
+            response.body("data.start_date", Matchers.notNullValue());
+            response.body("data.end_date", Matchers.notNullValue());
 
             response.body(matchesJsonSchema(schema));
         });
     }
+
 }

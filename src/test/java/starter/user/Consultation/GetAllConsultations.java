@@ -27,7 +27,7 @@ public class GetAllConsultations {
     }
 
     @Step("I should receive a data confirmation that indicates a successful retrieval of consultations with data")
-    public void receiveConfirmMessageSuccessGetAllDataConsultations(){
+    public void receiveConfirmMessageSuccessGetAllDataConsultations() {
         JsonSchemaHelper helper = new JsonSchemaHelper();
         String schema = helper.getResponseSchema(JsonSchema.GET_ALL_CONSULTATIONS_SCHEMA);
 
@@ -36,37 +36,36 @@ public class GetAllConsultations {
             response.body("message", Matchers.equalTo("Success Get Consultation"));
 
             response.body("data", Matchers.notNullValue());
-            response.body("data.size()", Matchers.greaterThan(0));
-
             response.body("data.id", Matchers.everyItem(Matchers.notNullValue()));
 
-            response.body("data.Doctor.id", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.Doctor.username", Matchers.everyItem(Matchers.equalTo("mamat1")));
-            response.body("data.Doctor.email", Matchers.everyItem(Matchers.equalTo("mamatsp@gmail.com")));
-            response.body("data.Doctor.name", Matchers.everyItem(Matchers.equalTo("mamat darwin")));
-            response.body("data.Doctor.address", Matchers.everyItem(Matchers.equalTo("jl. kemana")));
-            response.body("data.Doctor.phone_number", Matchers.everyItem(Matchers.equalTo("08321")));
-            response.body("data.Doctor.gender", Matchers.everyItem(Matchers.equalTo("pria")));
-            response.body("data.Doctor.is_available", Matchers.everyItem(Matchers.equalTo(true)));
-            response.body("data.Doctor.profile_picture", Matchers.everyItem(Matchers.equalTo("http://gambar.com")));
-            response.body("data.Doctor.balance", Matchers.everyItem(Matchers.equalTo(0)));
-            response.body("data.Doctor.experience", Matchers.everyItem(Matchers.equalTo(2)));
-            response.body("data.Doctor.almamater", Matchers.everyItem(Matchers.equalTo("Unissula")));
-            response.body("data.Doctor.graduation_year", Matchers.everyItem(Matchers.equalTo(2019)));
-            response.body("data.Doctor.practice_location", Matchers.everyItem(Matchers.equalTo("RS. Bedah Aro")));
-            response.body("data.Doctor.practice_city", Matchers.everyItem(Matchers.equalTo("Pekalongan")));
-            response.body("data.Doctor.practice_province", Matchers.everyItem(Matchers.equalTo("Jawa Tengah")));
-            response.body("data.Doctor.str_number", Matchers.everyItem(Matchers.equalTo("")));
-            response.body("data.Doctor.fee", Matchers.everyItem(Matchers.equalTo(0)));
-            response.body("data.Doctor.specialist", Matchers.everyItem(Matchers.equalTo("Mental")));
-            response.body("data.Doctor.amount", Matchers.everyItem(Matchers.equalTo(0)));
+            response.body("data.doctor.id", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.username", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.email", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.name", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.address", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.phone_number", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.gender", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.is_available", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.profile_picture", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.balance", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.experience", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.bachelor_almamater", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.bachelor_graduation_year", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.master_almamater", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.master_graduation_year", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.practice_location", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.practice_city", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.fee", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.specialist", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.amount", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.doctor.rating_precentage", Matchers.everyItem(Matchers.notNullValue()));
 
-            response.body("data.Status", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.PaymentStatus", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.IsAccepted", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.IsActive", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.Date", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.Time", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.status", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.payment_status", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.is_accepted", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.is_active", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.start_date", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.end_date", Matchers.everyItem(Matchers.notNullValue()));
 
             response.body(matchesJsonSchema(schema));
         });

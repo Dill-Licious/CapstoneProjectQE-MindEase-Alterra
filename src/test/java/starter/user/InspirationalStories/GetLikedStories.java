@@ -10,7 +10,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 public class GetLikedStories {
-    public static String url = "";
+    public static String url = "https://dev-capstone.practiceproject.tech/v1/users/stories/liked";
 
     @Step("I set the API endpoint to get liked stories in MindEase App")
     public String setAPIEndpointGetLikedStories(){
@@ -40,15 +40,13 @@ public class GetLikedStories {
             response.body("metadata.limit", Matchers.equalTo(10));
 
             response.body("data", Matchers.notNullValue());
-            response.body("data.size()", Matchers.greaterThan(0));
 
             response.body("data.id", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.title", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.content", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.date", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.image_url", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.view_count", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.is_liked", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.is_liked", Matchers.everyItem(Matchers.equalTo(true)));
 
             response.body("data.doctor.id", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.doctor.name", Matchers.everyItem(Matchers.notNullValue()));

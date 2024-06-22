@@ -38,6 +38,7 @@ public class GetAllDoctors {
             response.body("metadata.limit", Matchers.equalTo(10));
             response.body("data", Matchers.notNullValue());
             response.body("data.size()", Matchers.greaterThan(0));
+
             response.body("data.id", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.username", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.email", Matchers.everyItem(Matchers.notNullValue()));
@@ -49,14 +50,16 @@ public class GetAllDoctors {
             response.body("data.profile_picture", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.balance", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.experience", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.almamater", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.graduation_year", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.bachelor_almamater", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.bachelor_graduation_year", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.master_almamater", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.master_graduation_year", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.practice_location", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.practice_city", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.practice_province", Matchers.everyItem(Matchers.notNullValue()));
-            response.body("data.str_number", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.fee", Matchers.everyItem(Matchers.notNullValue()));
             response.body("data.specialist", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.amount", Matchers.everyItem(Matchers.notNullValue()));
+            response.body("data.rating_precentage", Matchers.everyItem(Matchers.notNullValue()));
 
             response.body(matchesJsonSchema(schema));
         });

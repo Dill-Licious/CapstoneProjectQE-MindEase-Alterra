@@ -30,11 +30,11 @@
         "date": {
           "type": "string"
         },
-        "view_count": {
-          "type": "number"
-        },
         "is_liked": {
           "type": "boolean"
+        },
+        "reading_time": {
+          "type": "number"
         },
         "doctor": {
           "type": "object",
@@ -59,8 +59,8 @@
         "content",
         "image_url",
         "date",
-        "view_count",
         "is_liked",
+        "reading_time",
         "doctor"
       ]
     }

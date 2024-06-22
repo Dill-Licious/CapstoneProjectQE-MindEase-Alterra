@@ -15,29 +15,21 @@
         "id": {
           "type": "number"
         },
-        "title": {
+        "message": {
           "type": "string"
         },
-        "singer": {
+        "role": {
           "type": "string"
         },
-        "music_url": {
+        "date": {
           "type": "string"
-        },
-        "image_url": {
-          "type": "string"
-        },
-        "is_liked": {
-          "type": "boolean"
         }
       },
       "required": [
         "id",
-        "title",
-        "singer",
-        "music_url",
-        "image_url",
-        "is_liked"
+        "message",
+        "role",
+        "date"
       ]
     }
   },
